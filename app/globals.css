@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --usb-verde: #04662c;
+  --usb-hoja: #0a7e38;
+  --usb-esmeralda: #048e61;
+  --usb-cielo: #10a9e6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-usb-fondo text-usb-tinta antialiased;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer components {
+  .tarjeta {
+    @apply rounded-xl bg-white shadow-tarjeta ring-1 ring-black/5;
+  }
+  .titulo-seccion {
+    @apply text-sm font-semibold uppercase tracking-wide text-usb-verde;
+  }
+  .boton-primario {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-usb-verde px-4 py-2 text-sm font-semibold text-white transition hover:bg-usb-hoja focus:outline-none focus-visible:ring-2 focus-visible:ring-usb-cielo focus-visible:ring-offset-2 disabled:opacity-60;
+  }
+  .boton-secundario {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-usb-verde/30 bg-white px-4 py-2 text-sm font-semibold text-usb-verde transition hover:bg-usb-verde/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-usb-cielo focus-visible:ring-offset-2;
+  }
+  .campo {
+    @apply w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-usb-tinta focus:border-usb-hoja focus:outline-none focus:ring-2 focus:ring-usb-cielo/40;
+  }
+}
+
+.franja-usb {
+  height: 6px;
+  background: linear-gradient(
+    to right,
+    #04662c 0%,
+    #04662c 70%,
+    #0a7e38 70%,
+    #0a7e38 79%,
+    #048e61 79%,
+    #048e61 96%,
+    #10a9e6 96%,
+    #10a9e6 100%
+  );
+}
+
+/* Tooltip y leyendas de Recharts */
+.recharts-default-tooltip {
+  border-radius: 8px !important;
+  border: 1px solid #d7e3da !important;
+}
