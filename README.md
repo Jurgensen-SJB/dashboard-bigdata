@@ -12,13 +12,14 @@
 ## 1. ¿Qué es este proyecto?
 
 Es la última parte de la tarea: un sitio web que se conecta **en vivo** a la base de datos PostgreSQL alojada en Supabase
-(la misma que se diseñó en el script `datacommerce_fase1.sql`) y muestra la información de negocio en tres pestañas:
+(la misma que se diseñó en el script `datacommerce_fase1.sql`) y muestra la información de negocio en cuatro pestañas:
 
 | Pestaña | Ruta | Qué muestra |
 |---|---|---|
 | **Dashboard** | `/` | Indicadores (KPIs), filtros, gráficos, mapa de Colombia, comparativas y clientes premium. |
 | **Base de datos** | `/base-de-datos` | Aviso académico, diagrama entidad-relación, detalle de las 7 tablas, relaciones y descarga del `.sql`. |
 | **Consultas** | `/consultas` | Las 10 consultas del análisis: se elige una, se ejecuta y se muestra el resultado con su análisis. |
+| **Plan de mejoramiento** | `/plan-mejoramiento` | Estrategias comerciales, matriz DOFA, plan de acción T1–T4, cronograma, cuadro de mando de metas y gestión de riesgos. |
 
 Además, en la esquina inferior derecha hay una tarjeta fija «Elaborado por» (se puede minimizar) y en el pie de todas las
 páginas aparece el aviso académico.

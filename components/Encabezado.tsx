@@ -7,6 +7,7 @@ const PESTANAS = [
   { href: "/", etiqueta: "Dashboard" },
   { href: "/base-de-datos", etiqueta: "Base de datos" },
   { href: "/consultas", etiqueta: "Consultas" },
+  { href: "/plan-mejoramiento", etiqueta: "Plan de mejoramiento" },
 ];
 
 export default function Encabezado() {
