@@ -20,6 +20,19 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.addEventListener('error', function(e) {
+                if (e && e.message && (e.message.indexOf('Loading chunk') !== -1 || e.message.indexOf('ChunkLoadError') !== -1)) {
+                  window.location.reload();
+                }
+              });
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-screen">
         <Encabezado />
         <main className="mx-auto w-full max-w-7xl px-4 pb-28 pt-6 sm:px-6">{children}</main>
